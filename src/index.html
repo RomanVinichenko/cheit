@@ -1,19 +1,149 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Top site, site">
-    <meta name="description" content="Top parcel template">
-    <meta name="author" content="Roma">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel template</title>
+    <meta name="description" content="Test task" />
+    <meta name="author" content="Roman Vinichenko" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="./images/fav.svg">
+    <meta property="og:title" content="Che IT" />
+    <meta property="og:description" content="Test task" />
+    <meta property="og:image" content="./images/hero-pic.png" />
+    <title>Roman`s test task</title>
     <link rel="stylesheet" href="scss/index.scss" />
   </head>
 
   <body>
-    <img src="./images/photo.jpg?as=webp" alt="Картинка">
     <include src="./partials/header.html"></include>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__wrapper">
+            <div class="hero__main">
+              <h3 class="hero__pretitile">Національна програма мобільності молоді</h3>
+              <h1 class="hero__title">Мандруй! Уявляй! Відкривай!</h1>
+              <p class="hero__text">
+                Найбільша в Центральній та Східній Європі 7-денна програма внутрішніх обмінів для
+                молоді віком від 14 до 21 року. Її ініціатором є Міністерство культури, молоді та
+                спорту України, в основу діяльності якого покладені демократичні цінності та
+                принципи всебічного розвитку особистості.
+              </p>
+              <button class="hero__button" type="button">Стати учасником програми МУВ</button>
+            </div>
+            <div class="hero__inner">
+              <img src="./images/hero-pic.png" alt="головна" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2 class="faq__title">FAQ</h2>
+          <p class="faq__info">Clicca sulle domande per aprire e leggere le risposte.</p>
+          <div class="faq__items">
+            <div class="faq__item">
+              <div class="faq__item-title">
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                <div class="faq__icon">
+                  <img src="./images/plus.svg" alt="відкрити" loading="lazy" />
+                  <img src="./images/minus.svg" alt="закрити" loading="lazy" />
+                </div>
+              </div>
+              <div class="faq__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst pulvinar est
+                  facilisi condimentum commodo, mattis est nisl facilisis. Sem augue dolor fusce
+                  sed. Tempus suscipit turpis eu pellentesque turpis non. In consectetur magna
+                  feugiat id nisl lorem leo vel eget. Tempus suscipit turpis eu pellentesque turpis
+                  non.
+                </p>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__item-title">
+                <h4>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra mi lacinia
+                  aliquam quis morbi orci at nisi, dignissim.
+                </h4>
+                <div class="faq__icon">
+                  <img src="./images/plus.svg" alt="відкрити" loading="lazy" />
+                  <img src="./images/minus.svg" alt="закрити" loading="lazy" />
+                </div>
+              </div>
+              <div class="faq__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst pulvinar est
+                  facilisi condimentum commodo, mattis est nisl facilisis. Sem augue dolor fusce
+                  sed. Tempus suscipit turpis eu pellentesque turpis non. In consectetur magna
+                  feugiat id nisl lorem leo vel eget. Tempus suscipit turpis eu pellentesque turpis
+                  non.
+                </p>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__item-title">
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                <div class="faq__icon">
+                  <img src="./images/plus.svg" alt="відкрити" loading="lazy" />
+                  <img src="./images/minus.svg" alt="закрити" loading="lazy" />
+                </div>
+              </div>
+              <div class="faq__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst pulvinar est
+                  facilisi condimentum commodo, mattis est nisl facilisis. Sem augue dolor fusce
+                  sed. Tempus suscipit turpis eu pellentesque turpis non. In consectetur magna
+                  feugiat id nisl lorem leo vel eget. Tempus suscipit turpis eu pellentesque turpis
+                  non.
+                </p>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__item-title">
+                <h4>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra mi lacinia
+                  aliquam quis morbi orci at nisi, dignissim.
+                </h4>
+                <div class="faq__icon">
+                  <img src="./images/plus.svg" alt="відкрити" loading="lazy" />
+                  <img src="./images/minus.svg" alt="закрити" loading="lazy" />
+                </div>
+              </div>
+              <div class="faq__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst pulvinar est
+                  facilisi condimentum commodo, mattis est nisl facilisis. Sem augue dolor fusce
+                  sed. Tempus suscipit turpis eu pellentesque turpis non. In consectetur magna
+                  feugiat id nisl lorem leo vel eget. Tempus suscipit turpis eu pellentesque turpis
+                  non.
+                </p>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__item-title">
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                <div class="faq__icon">
+                  <img src="./images/plus.svg" alt="відкрити" loading="lazy" />
+                  <img src="./images/minus.svg" alt="закрити" loading="lazy" />
+                </div>
+              </div>
+              <div class="faq__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst pulvinar est
+                  facilisi condimentum commodo, mattis est nisl facilisis. Sem augue dolor fusce
+                  sed. Tempus suscipit turpis eu pellentesque turpis non. In consectetur magna
+                  feugiat id nisl lorem leo vel eget. Tempus suscipit turpis eu pellentesque turpis
+                  non.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
     <script src="js/index.js" type="module"></script>
   </body>
 </html>
