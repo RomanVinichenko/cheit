@@ -1,0 +1,376 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  background-color: var(--white);
+  transition: box-shadow 0.3s;
+
+  .logo {
+    @include media($md) {
+      max-width: 100px;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-lang {
+      display: flex;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 24px;
+        border: 1px solid rgba(#e5e5e5, 0.6);
+        background-color: var(--lang);
+        transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;
+
+        &:hover {
+          border: 1px solid var(--white);
+          box-shadow: 0 1px 4px 0 rgba(#000, 0.15);
+          background-color: var(--white);
+        }
+
+        img {
+          z-index: 10;
+          display: block;
+          width: 100%;
+          min-width: min-content;
+        }
+      }
+
+      &__item-left {
+        border-radius: 3px 0 0 3px;
+      }
+
+      &__item-right {
+        border-radius: 0 3px 3px 0;
+      }
+
+      &__active {
+        border: 1px solid var(--white);
+        box-shadow: 0 1px 4px 0 rgba(#000, 0.15);
+        background-color: var(--white);
+      }
+    }
+
+    .nav-drop {
+      position: relative;
+      z-index: 10;
+      margin-right: 16px;
+      height: 62px;
+      cursor: pointer;
+
+      @include media($xl) {
+        margin-right: 10px;
+      }
+
+      @include media($lg) {
+        flex-direction: column;
+        margin: 0 0 12px;
+        height: auto;
+      }
+
+      p {
+        position: relative;
+        padding: 0 36px 0 13px;
+        font-size: 15px;
+        line-height: 24px;
+        color: var(--accent);
+
+        @include media($xl) {
+          padding: 0 24px 0 13px;
+        }
+
+        @include media($lg) {
+          margin-bottom: 6px;
+          padding: 0;
+          font-size: 17px;
+          line-height: 22px;
+          text-align: center;
+          color: var(--grey);
+        }
+
+        &::before {
+          content: url("../images/drop.svg");
+          position: absolute;
+          right: 14px;
+          top: 4px;
+          width: 16px;
+          height: 16px;
+          transition: transform 0.3s;
+
+          @include media($xl) {
+            right: 4px;
+          }
+
+          @include media($lg) {
+            display: none;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -19px;
+          opacity: 0;
+          width: 100%;
+          height: 4px;
+          background-color: var(--blue);
+          transition: opacity 0.3s;
+
+          @include media($lg) {
+            display: none;
+          }
+        }
+      }
+
+      ul {
+        position: absolute;
+        left: 0;
+        top: 62px;
+        opacity: 0;
+        width: 200px;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 1);
+        transition: opacity 0.3s;
+
+        @include media($lg) {
+          position: relative;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          opacity: 1;
+          width: auto;
+          box-shadow: none;
+          background-color: transparent;
+          gap: 8px;
+        }
+
+        a {
+          display: block;
+          padding: 11px 14px;
+          font-size: 15px;
+          line-height: 17.58px;
+          letter-spacing: 0.01em;
+          color: var(--grey);
+          transition: background-color 0.3s, color 0.3s;
+
+          @include media($lg) {
+            padding: 0;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            color: var(--accent);
+            background-color: transparent;
+          }
+
+          &:hover {
+            color: var(--accent);
+            background-color: var(--bg);
+
+            @include media($lg) {
+              color: var(--grey);
+              background-color: transparent;
+            }
+          }
+        }
+
+        .nav-drop__active {
+          color: var(--accent);
+          background-color: var(--bg);
+
+          @include media($lg) {
+            background-color: transparent;
+          }
+        }
+      }
+
+      &__active {
+        p {
+          &::before {
+            transform: rotate(180deg);
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+
+        ul {
+          opacity: 1;
+        }
+      }
+    }
+
+    .nav-list {
+      display: flex;
+      margin: 0 35px 0 auto;
+
+      @include media($xl) {
+        margin: 0 24px 0 auto;
+      }
+
+      @include media($lg) {
+        flex-direction: column;
+        margin: 0 auto 16px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+
+        a {
+          width: 100%;
+        }
+      }
+
+      &__item {
+        &:not(:last-child) {
+          margin-right: 30px;
+
+          @include media($xl) {
+            margin-right: 18px;
+          }
+
+          @include media($lg) {
+            margin: 0 0 12px;
+          }
+        }
+      }
+
+      &__link {
+        display: block;
+        font-size: 15px;
+        line-height: 24px;
+        color: var(--grey);
+        transition: color 0.3s;
+
+        @include media($lg) {
+          font-size: 17px;
+          line-height: 22px;
+          text-align: center;
+        }
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+
+    .nav-social {
+      display: flex;
+      margin-left: 30px;
+      gap: 20px;
+
+      @include media($xl) {
+        margin-left: 24px;
+        gap: 12px;
+      }
+
+      @include media($lg) {
+        margin: 16px 0 0;
+        gap: 18px;
+      }
+
+      a {
+        width: 16px;
+        height: 16px;
+
+        &:hover {
+          path {
+            fill: var(--accent);
+          }
+        }
+
+        svg {
+          path {
+            transition: fill 0.3s;
+          }
+        }
+      }
+    }
+
+    &__mobile {
+      position: relative;
+      display: none;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+
+      @include media($lg) {
+        display: block;
+      }
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: opacity 0.3s;
+
+        &:first-child {
+          opacity: 1;
+        }
+
+        &:last-child {
+          opacity: 0;
+        }
+      }
+    }
+
+    &__mobile-active {
+      img {
+        &:first-child {
+          opacity: 0;
+        }
+
+        &:last-child {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__box {
+      display: flex;
+      align-items: center;
+
+      @include media($lg) {
+        position: absolute;
+        left: 0;
+        top: 62px;
+        flex-direction: column;
+        padding: 12px 24px 24px;
+        width: 100%;
+        height: 120vh;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        background-color: var(--white);
+        transform: translateX(200%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      @include media($md) {
+        padding: 12px 16px 16px;
+      }
+    }
+
+    &__box-active {
+      transform: translateX(0);
+    }
+  }
+
+  &__active {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  }
+}
