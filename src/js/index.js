@@ -13,13 +13,13 @@ const faqs = document.querySelectorAll('.faq__item');
 
 const openAccordion = (accordion) => {
   const content = accordion.querySelector('.faq__content');
-  accordion.classList.add('faq__item-active');
+  accordion.classList.add('faq__item--active');
   content.style.maxHeight = content.scrollHeight + 'px';
 };
 
 const closeAccordion = (accordion) => {
   const content = accordion.querySelector('.faq__content');
-  accordion.classList.remove('faq__item-active');
+  accordion.classList.remove('faq__item--active');
   content.style.maxHeight = null;
 };
 
