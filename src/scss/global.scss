@@ -2,6 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: normal;
+  color: var(--accent);
   background-color: var(--bg);
   cursor: default;
 }
@@ -22,5 +23,31 @@ body {
 
   @include media($md) {
     padding: 0 16px;
+  }
+}
+
+.title {
+  &--xl {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 70px;
+
+    @include media($xl) {
+      font-size: 34px;
+      line-height: 46px;
+    }
+  }
+
+  &--lg {
+    font-weight: 500;
+    font-size: 36px;
+
+    @include media($md) {
+      font-size: 32px;
+    }
+  }
+
+  &--center {
+    text-align: center;
   }
 }
