@@ -65,6 +65,8 @@ body {
         }
 
         img {
+          width: 100%;
+          min-width: min-content;
           z-index: 10;
           display: block;
         }
